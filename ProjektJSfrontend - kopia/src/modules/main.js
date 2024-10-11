@@ -40,7 +40,13 @@ form.addEventListener("submit", (event) => {
     document.body.append(divResult);
   } else {
     resultElement.textContent = `Fel svar! Datorns val : ${correctNumber}`;
+     const add = { name:userName,
+                   score:score
+     };
+     addaPlayer(add).then(displayAlltoppPlayers);
+
     score = 0;
+
   }
 });
 
